@@ -3,6 +3,9 @@ Bio/
 Bio/FeatureIO/
 Bio/FeatureIO/seqont_owl.pm
 Bio/FeatureIO/types.pl
+Build.PL
+MANIFEST
+MANIFEST.SKIP
 README
 ont/
 ont/Makefile
