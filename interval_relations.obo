@@ -1,0 +1,566 @@
+encoding: utf-8
+synonymtypedef: ABBREVIATION "abbreviation"
+subsetdef: gia "Allen Interval Algebra. Between regions"
+subsetdef: gia_plus "Additional region-region relations needed to define others"
+subsetdef: junction_junction "Relations between junctions"
+subsetdef: junction_region "Relations between junctions and regions"
+subsetdef: region_junction "Relations between region and junctions"
+subsetdef: import_so "imported from SO"
+default-id-prefix: SO
+remark:     
+
+! MIREOT
+[Term]
+id: SO:0000001
+name: region
+subset: import_so
+
+[Term]
+id: SO:0000699
+name: junction
+subset: import_so
+
+! GIA-CORE
+
+[Typedef]
+id: coextensive_with
+name: coextensive_with
+synonym: "coincident_with" EXACT []
+synonym: "colocated_with" EXACT []
+synonym: "equivalent_extent_to" EXACT []
+synonym: "=" BROAD ABBREVIATION []
+is_a: overlaps
+def: "α(x) = α(y) ∧ ω(x) = ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is "=". It is unlikely this relation will be asserted, but it may be useful for queries
+subset: gia
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+intersection_of: starts_on_start_of
+intersection_of: ends_on_end_of
+is_transitive: true {implied="true"}
+is_reflexive: true {implied="true"}
+is_symmetric: true {implied="true"}
+
+[Typedef]
+id: upstream_of
+name: upstream_of
+synonym: "u" EXACT ABBREVIATION []
+comment: In Allen Interval Algebra, this is union(< m)
+subset: gia
+def: "ω(x) <= α(y)" [SO:cjm]
+inverse_of: downstream_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: ends_before_or_on start_of
+holds_over_chain: ends_before_or_on start_of
+is_transitive: true {implied="true"}
+
+[Typedef]
+id: downstream_of
+name: downstream_of
+synonym: "d" EXACT ABBREVIATION []
+comment: In Allen Interval Algebra, this is union(> mi)
+subset: gia
+def: "α(x) >= ω(y)" [SO:cjm]
+is_transitive: true
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: starts_after_or_on end_of
+holds_over_chain: starts_after_or_on end_of
+
+[Typedef]
+id: adjacent_to
+name: adjacent_to
+synonym: "a" EXACT ABBREVIATION []
+synonym: "borders" EXACT []
+synonym: "shares_border_with" EXACT []
+comment: In Allen Interval Algebra, this is union(m mi)
+subset: gia
+def: "α(x) = ω(y) ∨ ω(x) = α(y). OLD DEF: A geometric operator, specified in Egenhofer 1989. Two features meet if they share a junction on the sequence (and do not overlap? CJM)." [SO:ke]
+comment: TODO - check. Is this the same as m/mi? is an exon adjacent_to it's containing sequence?
+union_of: upstream_adjacent_to
+union_of: downstream_adjacent_to
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+
+[Typedef]
+id: upstream_adjacent_to
+name: upstream_adjacent_to
+synonym: "ua" EXACT ABBREVIATION []
+synonym: "borders_start_of" EXACT []
+synonym: "borders_five_prime_side_of" EXACT []
+def: "ω(x) = α(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is m
+subset: gia
+intersection_of: adjacent_to
+intersection_of: upstream_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: ends_on start_of
+holds_over_chain: ends_on start_of
+!use p9 to prove this:
+!holds_over_chain: finishes upstream_adjacent_to  {implied="true", explanation="α(x) > α(y) ∧ ω(x) = ω(y) AND ω(y) = α(z) ==> α(x) > α(y) ∧ ω(x) = α(z) ==>  ω(x) = α(z)"}
+!holds_over_chain: upstream_adjacent_to started_by
+
+[Typedef]
+id: downstream_adjacent_to
+name: downstream_adjacent_to
+synonym: "da" EXACT ABBREVIATION []
+synonym: "borders_end_of" EXACT []
+synonym: "borders_three_prime_side_of" EXACT []
+def: "α(x) = ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is mi
+subset: gia
+intersection_of: adjacent_to
+intersection_of: downstream_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: starts_on end_of
+holds_over_chain: starts_on end_of
+!use p9 to prove this:
+!holds_over_chain: starts downstream_adjacent_to {implied="true", explanation=>"inferred from inverse"}
+!holds_over_chain: downstream_adjacent_to finished_by
+
+[Typedef]
+id: overlaps
+name: overlaps
+subset: gia
+synonym: "o" EXACT ABBREVIATION []
+def: "x overlaps y if x and y have parts in common. ω(x) > α(y) ∧ α(x) < ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is union(o F D S e SI DI FI oi). We may want to define partial_overlaps as Union(o oi)?
+union_of: upstream_overlaps
+union_of: downstream_overlaps
+union_of: coextensive_with
+union_of: starts
+union_of: started_by
+union_of: finishes
+union_of: finished_by
+intersection_of: ends_after_start_of
+intersection_of: starts_before_end_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: contains contained_by {implied="true"}
+holds_over_chain: contains contained_by {implied="true"}
+!holds_over_chain: upstream_adjacent_to finishes {implied="true", notes=>"prover 9 cannot prove this at the moment. need to add axioms such that intervals have end > start"}
+
+[Typedef]
+id: upstream_overlaps
+name: upstream_overlaps
+synonym: "uo" EXACT ABBREVIATION []
+def: "α(x) < α(y) ∧ ω(x) < ω(y) ∧ α(y) < ω(x)" [SO:cjm]
+comment: In Allen Interval Algebra, this is o (primitive). TODO: is it more intuitive to have UO be exclusive of upstream_of?
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_o.png
+xref: http://upload.wikimedia.org/wikipedia/commons/1/1f/Allen_calculus_overlap.png
+formula: "upstream_overlaps(x,y) <-> alpha(x) < alpha(y) & omega(x) < omega(y) & alpha(y) < omega(x)" Prover9 [RO:Neuhaus]
+inverse_of: downstream_overlaps
+intersection_of: starts_before_start_of
+intersection_of: ends_before_end_of
+intersection_of: ends_after_start_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+
+[Typedef]
+id: downstream_overlaps
+name: downstream_overlaps
+synonym: "do" EXACT ABBREVIATION []
+def: "α(y) < α(x) ∧ ω(y) < ω(x) ∧ α(x) < ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is oi
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_oi.png
+intersection_of: starts_after_start_of
+intersection_of: ends_after_end_of
+intersection_of: starts_before_end_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+
+[Typedef]
+id: starts
+name: starts
+synonym: "s" EXACT ABBREVIATION []
+def: "α(x) = α(y) ∧ ω(x) < ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is s (primitive). Is the name intuitive enough?. Example: start_codon starts CDS
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_s.png
+xref: http://upload.wikimedia.org/wikipedia/commons/4/4a/Allen_calculus_start.png
+is_transitive: true
+inverse_of: started_by
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+intersection_of: starts_on_start_of
+intersection_of: ends_before_end_of
+
+[Typedef]
+id: started_by
+name: started_by
+synonym: "s-" EXACT ABBREVIATION []
+def: "α(y) = α(x) ∧ ω(y) < ω(x)" [SO:cjm]
+comment: In Allen Interval Algebra, this is si (primitive). Examples: CDS started_by start_codon
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_si.png
+is_transitive: true
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+intersection_of: starts_on_start_of
+intersection_of: ends_after_end_of
+
+[Typedef]
+id: finishes
+name: finishes
+synonym: "f" EXACT ABBREVIATION []
+def: "α(x) > α(y) ∧ ω(x) = ω(y)" [SO:cjm]
+comment: In Allen Interval Algebra, this is f (primitive)
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_f.png
+is_transitive: true
+inverse_of: finished_by
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+intersection_of: starts_after_start_of
+intersection_of: ends_on_end_of
+
+[Typedef]
+id: finished_by
+name: finished_by
+synonym: "f-" EXACT ABBREVIATION []
+def: "α(y) > α(x) ∧ ω(y) = ω(x)" [SO:cjm]
+comment: In Allen Interval Algebra, this is fi (primitive)
+subset: gia
+xref: http://www.ics.uci.edu/~alspaugh/foundations/images/A_fi.png
+is_transitive: true
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+
+[Typedef]
+id: contained_by
+name: contained_by
+synonym: "c" EXACT ABBREVIATION []
+def: "α(x) > α(y) ∧ ω(x) < ω(y)" [SO:cjm]
+subset: gia
+comment: equivalent to contained_by/during in Allen
+is_transitive: true
+inverse_of: contains
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+intersection_of: starts_after_start_of
+intersection_of: ends_before_end_of
+
+[Typedef]
+id: contains
+name: contains
+synonym: "c-" EXACT ABBREVIATION []
+def: "α(y) > α(x) ∧ ω(y) < ω(x)" [SO:cjm]
+subset: gia
+is_transitive: true
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+
+! junction-junction
+
+[Typedef]
+id: before
+name: before
+synonym: "<" EXACT []
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+inverse_of: after
+isrreflexive: true {note="must be relaxed for circular genomes"}
+is_transitive: true
+is_antisymmetric: true
+transitive_version_of: immediately_before
+disjoint_from: after
+is_a: before_or_on
+
+[Typedef]
+id: immediately_before
+name: immediately_before
+synonym: "<1" EXACT []
+synonym: "pred" EXACT []
+def: "J1 immediately_before J2 iff J1 and J2 are separated by a single nucleotide base on the same strand, with J1 being upstream of J2" [SO:CJM]
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+isrreflexive: true
+is_antisymmetric: true
+is_a: before
+
+[Typedef]
+id: after
+name: after
+synonym: ">" EXACT []
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+isrreflexive: true {note="must be relaxed for circular genomes"}
+is_transitive: true
+is_antisymmetric: true
+is_a: after_or_on
+
+[Typedef]
+id: equivalent_junction_to
+name: equivalent_junction_to
+def: "J1 immediately_before J2 iff J1 and J2 are co-located." [SO:CJM]
+comment: treat same as identity, or allow two junctions to share a junction location?
+synonym: "=" BROAD ABBREVIATION []
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+is_reflexive: true
+is_symmetric: true
+
+! compositional, formed from core junction-junction above
+
+[Typedef]
+id: before_or_on
+name: before_or_on
+synonym: "<=" EXACT ABBREVIATION []
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+inverse_of_on_type_level: after_or_on
+union_of: before
+union_of: equivalent_junction_to
+is_reflexive: true
+reflexive_version_of: before
+
+[Typedef]
+id: after_or_on
+name: after_or_on
+synonym: ">=" EXACT []
+subset: junction_junction
+domain: SO:0000699 ! junction
+range: SO:0000699 ! junction
+union_of: after
+union_of: equivalent_junction_to
+is_reflexive: true
+
+! ** region-junction and junction-region **
+
+! the first 2 and their inverses are typically asserted in instance data
+
+[Typedef]
+id: ends_on
+name: ends_on
+synonym: "has_end" EXACT []
+synonym: "omega" EXACT []
+synonym: "has_omega" EXACT []
+def: "Relation between a region r and a junction j, such that j is the outermost end boundary of r" []
+subset: region_junction
+comment: if exonA has coordinates [100..200] on S, then exonA ends_on S200
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+inverse_of: end_of
+is_functional: true
+
+[Typedef]
+id: end_of
+name: end_of
+synonym: "omegaOf" EXACT []
+synonym: "omega_of" EXACT []
+synonym: "is_end_of" EXACT []
+comment: if exonA has coordinates [100..200] on S, then S200 end_of exonA
+subset: junction_region
+domain: SO:0000699 ! junction
+range: SO:0000001 ! region
+
+[Typedef]
+id: starts_on
+name: starts_on
+synonym: "has_start" EXACT []
+synonym: "alpha" EXACT []
+synonym: "has_alpha" EXACT []
+is_functional: true
+inverse_of: start_of
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+
+[Typedef]
+id: start_of
+name: start_of
+synonym: "alphaOf" EXACT []
+subset: junction_region
+domain: SO:0000699 ! junction
+range: SO:0000001 ! region
+
+! the following are generally inferred from instance data
+
+[Typedef]
+id: ends_before
+name: ends_before
+def: "x ends_before j iff ω(x) < j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: ends_on before
+holds_over_chain: ends_on before
+
+[Typedef]
+id: ends_after
+name: ends_after
+def: "x ends_after j iff ω(x) > j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: ends_on after
+holds_over_chain: ends_on after
+
+[Typedef]
+id: ends_before_or_on
+name: ends_before_or_on
+def: "x ends_before_or_on j iff ω(x) <= j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: ends_on before_or_on
+holds_over_chain: ends_on before_or_on
+union_of: ends_before
+union_of: ends_on
+
+[Typedef]
+id: starts_after
+name: starts_after
+def: "x starts_after j iff ω(x) > j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: starts_on after
+holds_over_chain: starts_on after
+
+[Typedef]
+id: starts_before
+name: starts_before
+def: "x starts_before j iff ω(x) > j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: starts_on before
+holds_over_chain: starts_on before
+
+[Typedef]
+id: starts_after_or_on
+name: starts_after_or_on
+def: "x starts_after_or_on j iff ω(x) >= j" [SO:cjm]
+subset: region_junction
+domain: SO:0000001 ! region
+range: SO:0000699 ! junction
+equivalent_to_chain: starts_on after_or_on
+holds_over_chain: starts_on after_or_on
+union_of: starts_after
+union_of: starts_on
+
+! these region-region relations are 'surplus'
+
+[Typedef]
+id: starts_on_start_of
+name: starts_on_start_of
+synonym: "shares_start_with" EXACT []
+def: "α(x) = α(y)" [SO:cjm]
+subset: gia_plus
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: starts_on start_of
+holds_over_chain: starts_on start_of
+union_of: starts
+union_of: started_by
+union_of: coextensive_with
+is_symmetric: true {implied="true"}
+is_transitive: true {implied="true"}
+is_reflexive: true {implied="true"}
+
+[Typedef]
+id: ends_on_end_of
+name: ends_on_end_of
+synonym: "shares_end_with" EXACT []
+def: "ω(x) = ω(y)" [SO:cjm]
+subset: gia_plus
+equivalent_to_chain: ends_on end_of
+holds_over_chain: ends_on end_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+union_of: finishes
+union_of: finished_by
+union_of: coextensive_with
+is_symmetric: true {implied="true"}
+is_transitive: true {implied="true"}
+is_reflexive: true {implied="true"}
+
+[Typedef]
+id: ends_before_end_of
+name: ends_before_end_of
+def: "ω(x) < ω(y)" [SO:cjm]
+subset: gia_plus
+equivalent_to_chain: ends_before end_of
+holds_over_chain: ends_before end_of
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+inverse_of: ends_after_end_of
+is_transitive: true
+!union_of: upstream_of
+!union_of: upstream_overlaps
+
+[Typedef]
+id: ends_after_end_of
+name: ends_after_end_of
+def: "ω(x) > ω(y)" [SO:cjm]
+subset: gia_plus
+equivalent_to_chain: ends_after end_of
+holds_over_chain: ends_after end_of
+is_transitive: true
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+!union_of: upstream_of
+!union_of: upstream_overlaps
+
+[Typedef]
+id: starts_after_start_of
+name: starts_after_start_of
+def: "α(x) > α(y)" [SO:cjm]
+subset: gia_plus
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+inverse_of: starts_before_start_of
+!union_of: downstream_of
+!union_of: downstream_overlaps
+is_transitive: true
+equivalent_to_chain: starts_after start_of
+holds_over_chain: starts_after start_of
+!don't think this one is true:
+!holds_over_chain: finishes upstream_adjacent_to  {implied="true", explanation="α(x) > α(y) ∧ ω(x) = ω(y) AND ω(y) = α(z) ==> α(x) > α(y) ∧ ω(x) = α(z) ==> α(x) > α(y)"}
+
+[Typedef]
+id: starts_before_start_of
+name: starts_before_start_of
+def: "α(x) < α(y)" [SO:cjm]
+subset: gia_plus
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+is_transitive: true
+equivalent_to_chain: starts_before start_of
+holds_over_chain: starts_before start_of
+
+[Typedef]
+id: ends_after_start_of
+name: ends_after_start_of
+def: "ω(x) > α(y)" [SO:cjm]
+subset: gia_plus
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+inverse_of: starts_before_end_of
+equivalent_to_chain: ends_after start_of
+holds_over_chain: ends_after start_of
+formula: "starts_on2(r,j1) -> exists j2 (ends_on2(r,j2) & before2(j1,j2))" Prover9 []
+formula: "ends_on2(r,j2) -> exists j1 (starts_on2(r,j1) & before2(j1,j2))" Prover9 []
+
+[Typedef]
+id: starts_before_end_of
+name: starts_before_end_of
+def: "α(x) < ω(y)" [SO:cjm]
+subset: gia_plus
+domain: SO:0000001 ! region
+range: SO:0000001 ! region
+equivalent_to_chain: starts_before end_of
+holds_over_chain: starts_before end_of
+
+

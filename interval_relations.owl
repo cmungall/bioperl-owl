@@ -1,0 +1,1110 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/obo/owl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#" xmlns:oboContent="http://purl.org/obo/owl/" xmlns:oban="http://purl.org/obo/oban/" xmlns:owl11="http://www.w3.org/2006/12/owl11#onClass" xmlns:owl2="http://www.w3.org/2006/12/owl2#onClass" xmlns:obo="http://purl.org/obo/owl/obo#" xml:base="http://purl.org/obo/owl/interval_relations">
+<!--oboInOwl meta-model - we must declare this here, otherwise the ontology will be OWL-Full unless we import http://www.geneontology.org/formats/oboInOwl#-->
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDate"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasVersion"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefinition"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasURI"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#isCyclic"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#savedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#replacedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#DbXref"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Definition"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Subset"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Synonym"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymType"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  <owl:ObjectProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
+  <owl:Ontology rdf:about="">
+    <rdfs:comment></rdfs:comment>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#gia">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allen Interval Algebra. Between regions</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#gia_plus">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Additional region-region relations needed to define others</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#junction_junction">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relations between junctions</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#junction_region">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relations between junctions and regions</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#region_junction">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relations between region and junctions</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#import_so">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imported from SO</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <rdfs:label></rdfs:label>
+    <rdfs:comment>
+          This is an OWL translation of an ontology whose native representational form is .obo. The translation was performed using the oboInOwl xslt library. For details, see http://www.berkeleybop.org/obo-conv.cgi
+        </rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001">
+    <rdfs:label xml:lang="en">region</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#import_so"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000699">
+    <rdfs:label xml:lang="en">junction</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#import_so"/>
+  </owl:Class>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#coextensive_with">
+    <rdfs:label xml:lang="en">coextensive_with</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is "=". It is unlikely this relation will be asserted, but it may be useful for queries</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) = &#x3B1;(y) &#x2227; &#x3C9;(x) = &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">coincident_with</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">colocated_with</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">equivalent_extent_to</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasBroadSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">=</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasBroadSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/SO#overlaps"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#upstream_of">
+    <rdfs:label xml:lang="en">upstream_of</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#downstream_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is union(&lt; m)</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) &lt;= &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">u</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_before_or_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_before_or_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#downstream_of">
+    <rdfs:label xml:lang="en">downstream_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is union(&gt; mi)</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &gt;= &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">d</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_after_or_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_after_or_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#adjacent_to">
+    <rdfs:label xml:lang="en">adjacent_to</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is union(m mi)</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TODO - check. Is this the same as m/mi? is an exon adjacent_to it's containing sequence?</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) = &#x3C9;(y) &#x2228; &#x3C9;(x) = &#x3B1;(y). OLD DEF: A geometric operator, specified in Egenhofer 1989. Two features meet if they share a junction on the sequence (and do not overlap? CJM).</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">a</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">borders</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">shares_border_with</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#upstream_adjacent_to">
+    <rdfs:label xml:lang="en">upstream_adjacent_to</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is m</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) = &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">ua</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">borders_start_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">borders_five_prime_side_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#downstream_adjacent_to">
+    <rdfs:label xml:lang="en">downstream_adjacent_to</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is mi</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) = &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">da</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">borders_end_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">borders_three_prime_side_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#overlaps">
+    <rdfs:label xml:lang="en">overlaps</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is union(o F D S e SI DI FI oi). We may want to define partial_overlaps as Union(o oi)?</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x overlaps y if x and y have parts in common. &#x3C9;(x) &gt; &#x3B1;(y) &#x2227; &#x3B1;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">o</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#contains"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#contained_by"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#contains"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#contained_by"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#upstream_overlaps">
+    <rdfs:label xml:lang="en">upstream_overlaps</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#downstream_overlaps"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is o (primitive). TODO: is it more intuitive to have UO be exclusive of upstream_of?</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &lt; &#x3B1;(y) &#x2227; &#x3C9;(x) &lt; &#x3C9;(y) &#x2227; &#x3B1;(y) &lt; &#x3C9;(x)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">uo</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_o.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_o.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://upload.wikimedia.org/wikipedia/commons/1/1f/Allen_calculus_overlap.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://upload.wikimedia.org/wikipedia/commons/1/1f/Allen_calculus_overlap.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#downstream_overlaps">
+    <rdfs:label xml:lang="en">downstream_overlaps</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is oi</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(y) &lt; &#x3B1;(x) &#x2227; &#x3C9;(y) &lt; &#x3C9;(x) &#x2227; &#x3B1;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">do</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_oi.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_oi.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#starts">
+    <rdfs:label xml:lang="en">starts</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#started_by"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is s (primitive). Is the name intuitive enough?. Example: start_codon starts CDS</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) = &#x3B1;(y) &#x2227; &#x3C9;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">s</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_s.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_s.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://upload.wikimedia.org/wikipedia/commons/4/4a/Allen_calculus_start.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://upload.wikimedia.org/wikipedia/commons/4/4a/Allen_calculus_start.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#started_by">
+    <rdfs:label xml:lang="en">started_by</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is si (primitive). Examples: CDS started_by start_codon</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(y) = &#x3B1;(x) &#x2227; &#x3C9;(y) &lt; &#x3C9;(x)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">s-</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_si.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_si.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#finishes">
+    <rdfs:label xml:lang="en">finishes</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#finished_by"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is f (primitive)</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &gt; &#x3B1;(y) &#x2227; &#x3C9;(x) = &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">f</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_f.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_f.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#finished_by">
+    <rdfs:label xml:lang="en">finished_by</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Allen Interval Algebra, this is fi (primitive)</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(y) &gt; &#x3B1;(x) &#x2227; &#x3C9;(y) = &#x3C9;(x)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">f-</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>URL:http://www.ics.uci.edu/~alspaugh/foundations/images/A_fi.png</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ics.uci.edu/~alspaugh/foundations/images/A_fi.png</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#contained_by">
+    <rdfs:label xml:lang="en">contained_by</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#contains"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">equivalent to contained_by/during in Allen</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &gt; &#x3B1;(y) &#x2227; &#x3C9;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">c</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#contains">
+    <rdfs:label xml:lang="en">contains</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(y) &gt; &#x3B1;(x) &#x2227; &#x3C9;(y) &lt; &#x3C9;(x)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">c-</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#before">
+    <rdfs:label xml:lang="en">before</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#after"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&lt;</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/SO#before_or_on"/>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#immediately_before">
+    <rdfs:label xml:lang="en">immediately_before</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">J1 immediately_before J2 iff J1 and J2 are separated by a single nucleotide base on the same strand, with J1 being upstream of J2</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:CJM</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_CJM</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&lt;1</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">pred</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/SO#before"/>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#after">
+    <rdfs:label xml:lang="en">after</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&gt;</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/SO#after_or_on"/>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#equivalent_junction_to">
+    <rdfs:label xml:lang="en">equivalent_junction_to</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treat same as identity, or allow two junctions to share a junction location?</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">J1 immediately_before J2 iff J1 and J2 are co-located.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:CJM</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_CJM</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasBroadSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">=</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasBroadSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#before_or_on">
+    <rdfs:label xml:lang="en">before_or_on</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&lt;=</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#after_or_on">
+    <rdfs:label xml:lang="en">after_or_on</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_junction"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">&gt;=</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#ends_on">
+    <rdfs:label xml:lang="en">ends_on</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#end_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if exonA has coordinates [100..200] on S, then exonA ends_on S200</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Relation between a region r and a junction j, such that j is the outermost end boundary of r</rdfs:label>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">has_end</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">omega</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">has_omega</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#end_of">
+    <rdfs:label xml:lang="en">end_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if exonA has coordinates [100..200] on S, then S200 end_of exonA</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_region"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">omegaOf</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">omega_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">is_end_of</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#starts_on">
+    <rdfs:label xml:lang="en">starts_on</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#start_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">has_start</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">alpha</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">has_alpha</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#start_of">
+    <rdfs:label xml:lang="en">start_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#junction_region"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">alphaOf</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#ends_before">
+    <rdfs:label xml:lang="en">ends_before</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x ends_before j iff &#x3C9;(x) &lt; j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#ends_after">
+    <rdfs:label xml:lang="en">ends_after</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x ends_after j iff &#x3C9;(x) &gt; j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#ends_before_or_on">
+    <rdfs:label xml:lang="en">ends_before_or_on</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x ends_before_or_on j iff &#x3C9;(x) &lt;= j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before_or_on"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before_or_on"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#starts_after">
+    <rdfs:label xml:lang="en">starts_after</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x starts_after j iff &#x3C9;(x) &gt; j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#starts_before">
+    <rdfs:label xml:lang="en">starts_before</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x starts_before j iff &#x3C9;(x) &gt; j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#before"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#starts_after_or_on">
+    <rdfs:label xml:lang="en">starts_after_or_on</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#region_junction"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">x starts_after_or_on j iff &#x3C9;(x) &gt;= j</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after_or_on"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#after_or_on"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#starts_on_start_of">
+    <rdfs:label xml:lang="en">starts_on_start_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) = &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">shares_start_with</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#ends_on_end_of">
+    <rdfs:label xml:lang="en">ends_on_end_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) = &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">shares_end_with</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_on"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#ends_before_end_of">
+    <rdfs:label xml:lang="en">ends_before_end_of</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#ends_after_end_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#ends_after_end_of">
+    <rdfs:label xml:lang="en">ends_after_end_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) &gt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#starts_after_start_of">
+    <rdfs:label xml:lang="en">starts_after_start_of</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#starts_before_start_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &gt; &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/SO#starts_before_start_of">
+    <rdfs:label xml:lang="en">starts_before_start_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &lt; &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#ends_after_start_of">
+    <rdfs:label xml:lang="en">ends_after_start_of</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/SO#starts_before_end_of"/>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3C9;(x) &gt; &#x3B1;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#ends_after"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#start_of"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/SO#starts_before_end_of">
+    <rdfs:label xml:lang="en">starts_before_end_of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:range rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#gia_plus"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">&#x3B1;(x) &lt; &#x3C9;(y)</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#starts_before"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/SO#end_of"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+</rdf:RDF>

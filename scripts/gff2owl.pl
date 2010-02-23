@@ -1,4 +1,4 @@
-#!perl -w
+#!/usr/bin/perl -w
 
 use strict;
 use Getopt::Long;
@@ -6,6 +6,7 @@ use Bio::FeatureIO;
 
 my $help;
 my $from='gff';
+my $version = 3;
 my $to=undef;
 
 my %opt = ();
@@ -27,8 +28,12 @@ my $usage="Usage:
 
   $script --from in-format < file.in-format > ";
 
+if ($from =~ /^gff(\d+)/) {
+    $from = 'gff';
+    $version = 3;
+}
 
-my $in  = Bio::FeatureIO->newFh(-fh => \*STDIN , '-format' => $from);
+my $in  = Bio::FeatureIO->newFh(-fh => \*STDIN , '-format' => $from, -version=>$version);
 my $out = Bio::FeatureIO->newFh(-fh=> \*STDOUT, '-format' => 'seqont_owl',     
                                 %opt
 );
