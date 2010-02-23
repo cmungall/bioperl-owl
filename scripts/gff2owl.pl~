@@ -1,0 +1,87 @@
+#!perl -w
+# $Id: seqconvert.PLS 15088 2008-12-04 02:49:09Z bosborne $
+
+use strict;
+use Getopt::Long;
+use Bio::FeatureIO;
+
+my $help;
+my $from=undef;
+my $to=undef;
+
+my %opt = ();
+if (@ARGV && $ARGV[0] =~ /^\-/) {
+    my $opt = shift @ARGV;
+    if ($opt eq '-j' || $opt eq '--enumerate-junctions') {
+        $opt{'-enumerate_junctions'} = 1;
+    }
+    else {
+        die $opt;
+    }
+}
+
+my $script=substr($0, 1+rindex($0,'/'));
+my $usage="Usage:
+
+  $script --from in-format --to out-format < file.in-format > ";
+
+
+my $in  = Bio::FeatureIO->newFh(-fh => \*STDIN , '-format' => 'gff');
+my $out = Bio::FeatureIO->newFh(-fh=> \*STDOUT, '-format' => 'seqont_owl',     
+                                %opt
+);
+
+print STDERR "parsing: $in\n";
+foreach (<$in>) {
+    print $out $_;
+
+}
+#$out->_destroy_writer;
+
+__END__
+
+=head1 NAME
+
+seqconvert - generic BioPerl sequence format converter
+
+=head1 SYNOPSIS
+
+  seqconvert --from in-format --to out-format < file.in-format > file.out-format
+  # or
+  seqconvert -f in-format -t out-format < file.in-format > file.out-format
+
+=head1 DESCRIPTION
+
+This script gives command line interface to BioPerl Bio::SeqIO. 
+
+=head1 SEE ALSO
+
+L<Bio::SeqIO>
+L<bp_sreformat.PLS> for similar functionality which also supports AlignIO.
+
+=head1 FEEDBACK
+
+=head2 Mailing Lists
+
+User feedback is an integral part of the evolution of this and other
+Bioperl modules. Send your comments and suggestions preferably to
+the Bioperl mailing list.  Your participation is much appreciated.
+
+  bioperl-l@bioperl.org                  - General discussion
+  http://bioperl.org/wiki/Mailing_lists  - About the mailing lists
+
+=head2 Reporting Bugs
+
+Report bugs to the Bioperl bug tracking system to help us keep track
+of the bugs and their resolution. Bug reports can be submitted via the
+web:
+
+  http://bugzilla.open-bio.org/
+
+=head1 AUTHOR - Philip Lijnzaad
+
+Email E<lt>p.lijnzaad-at-med.uu.nlE<gt>
+
+=cut
+
+__END__
