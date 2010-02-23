@@ -1,0 +1,3470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/obo/owl/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#" xmlns:oboContent="http://purl.org/obo/owl/" xmlns:oban="http://purl.org/obo/oban/" xmlns:owl11="http://www.w3.org/2006/12/owl11#onClass" xmlns:owl2="http://www.w3.org/2006/12/owl2#onClass" xmlns:obo="http://purl.org/obo/owl/obo#" xml:base="http://purl.org/obo/owl/so_ext">
+<!--oboInOwl meta-model - we must declare this here, otherwise the ontology will be OWL-Full unless we import http://www.geneontology.org/formats/oboInOwl#-->
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDate"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasVersion"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefinition"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasURI"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#isCyclic"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#savedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#replacedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#DbXref"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Definition"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Subset"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#Synonym"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymType"/>
+  <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+  <owl:ObjectProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
+  <owl:Ontology rdf:about="">
+    <oboInOwl:hasDate>12:06:2008 17:38</oboInOwl:hasDate>
+    <oboInOwl:savedBy>kareneilbeck</oboInOwl:savedBy>
+    <oboInOwl:hasDefaultNamespace>sequence</oboInOwl:hasDefaultNamespace>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#biosapiens">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biosapiens protein feature ontology</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <oboInOwl:hasSubset>
+      <oboInOwl:Subset rdf:about="http://purl.org/obo/owl/obo#SOFA">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOFA</rdfs:comment>
+      </oboInOwl:Subset>
+    </oboInOwl:hasSubset>
+    <rdfs:label>sequence</rdfs:label>
+    <rdfs:comment>
+          This is an OWL translation of an ontology whose native representational form is .obo. The translation was performed using the oboInOwl xslt library. For details, see http://www.berkeleybop.org/obo-conv.cgi
+        </rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://purl.org/obo/owl/GO#GO_0008150">
+    <rdfs:label xml:lang="en">biological_process</rdfs:label>
+    <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001">
+    <rdfs:label xml:lang="en">region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">every region is adjacent_to 2 junctions -- CJM</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">sequence</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000110"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#is_consecutive_sequence_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001236"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000104">
+    <rdfs:label xml:lang="en">polypeptide</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A sequence of amino acids linked by peptide bonds which may lack appreciable tertiary structure and may not be liable to irreversible denaturation.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#translation_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#is_consecutive_sequence_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001237"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001237">
+    <rdfs:label xml:lang="en">amino_acid</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A sequence feature that corresponds to a single amino acid residue in a polypeptide.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>RSC:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/RSC#RSC_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">amino acid</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001411"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000104"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000110">
+    <rdfs:label xml:lang="en">sequence_feature</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An extent of biological sequence.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">located sequence feature</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">located_sequence_feature</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001"/>
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000699"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000120">
+    <rdfs:label xml:lang="en">protein_coding_primary_transcript</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May contain introns.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A primary transcript that, at least in part, encodes one or more proteins.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">pre mRNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000185"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000147">
+    <rdfs:label xml:lang="en">exon</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of the transcript sequence within a gene which is not removed from the primary RNA transcript by RNA splicing.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000673"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000178">
+    <rdfs:label xml:lang="en">operon</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A group of contiguous genes transcribed as a single (polycistronic) mRNA from a single regulatory region.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene cassette</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encodes"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000631"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000185">
+    <rdfs:label xml:lang="en">primary_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A transcript that in its initial state requires modification to be functional.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">precursor RNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000673"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_into"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000233"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encoded_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#output_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0006350"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000315">
+    <rdfs:label xml:lang="en">TSS</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is isa parent correct? distinguish between functional parthood and containment. Also the upstream_of relation is weak. See paper.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The first base where RNA polymerase begins to synthesize the RNA transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">transcription start site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000835"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000318">
+    <rdfs:label xml:lang="en">start_codon</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">First codon to be translated by a ribosome.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">initiation codon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">start codon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000360"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#starts"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000319">
+    <rdfs:label xml:lang="en">stop_codon</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">In mRNA, a set of three nucleotides that indicates the end of information for protein synthesis.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">stop codon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000360"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#finishes"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000360">
+    <rdfs:label xml:lang="en">codon</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A set of (usually) three nucleotide bases in a DNA or RNA sequence, which together signify a unique amino acid or the termination of translation.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.everythingbio.com/glos/definition.php?word=codon</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.everythingbio.com/glos/definition.php?word=codon</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001236"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#translates_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001237"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001236">
+    <rdfs:label xml:lang="en">base</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A base is a sequence feature that corresponds to a single unit of a nucleotide polymer.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <oboInOwl:hasDbXref>
+      <oboInOwl:DbXref>
+        <rdfs:label>CHEBI:36976</rdfs:label>
+        <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/CHEBI#CHEBI_36976</oboInOwl:hasURI>
+      </oboInOwl:DbXref>
+    </oboInOwl:hasDbXref>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001411"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000201">
+    <rdfs:label xml:lang="en">interior_exon</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">how do we interpret bounded? See https://sourceforge.net/tracker2/?func=detail&amp;aid=2385918&amp;group_id=72703&amp;atid=810408 - adjacent_to may not be correct</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An exon that is bounded by 5' and 3' splice sites.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>PMID:10373547</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/PMID#PMID_10373547</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">interior exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000147"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000163"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000164"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000162"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000195">
+    <rdfs:label xml:lang="en">coding_exon</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An exon whereby at least one base is part of a codon, including the stop_codon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000147"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000004">
+    <rdfs:label xml:lang="en">interior_coding_exon</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">interior coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000201"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000198">
+    <rdfs:label xml:lang="en">noncoding_exon</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An exon that does not contain any codons.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">noncoding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000147"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000200">
+    <rdfs:label xml:lang="en">five_prime_coding_exon</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The 5' most coding exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">5' coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five prime coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000195"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000318"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000202">
+    <rdfs:label xml:lang="en">three_prime_coding_exon</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The exon that is most 3-prime on a given transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">3' coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime coding exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000195"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000319"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0005845">
+    <rdfs:label xml:lang="en">exon_of_single_exon_gene</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An exon that is the only exon in a gene.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>RSC:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/RSC#RSC_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">exon of single exon gene</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">single_exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">singleton exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000147"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#indirectly_encoded_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/CJM#single_exon_gene"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/CJM#single_exon_gene">
+    <rdfs:label xml:lang="en">single_exon_gene</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new class introduced to define exon_of_single_exon_gene</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A gene with one exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000704"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#indirectly_encodes"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001215">
+    <rdfs:label xml:lang="en">coding_region_of_exon</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exon containing either a start or stop codon will be partially coding and partially non coding.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The region of an exon that encodes for protein sequence.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">coding region of exon</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000852"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000191">
+    <rdfs:label xml:lang="en">interior_intron</rdfs:label>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">interior intron</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000188"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000196">
+    <rdfs:label xml:lang="en">five_prime_exon_coding_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for a computable def, we need to specify that this is the maximal portion overlapping the CDS and five_prime_coding_exon</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The sequence of the 5' exon that encodes for protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five prime exon coding region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001215"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000200"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000197">
+    <rdfs:label xml:lang="en">three_prime_exon_coding_region</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The sequence of the 3' exon that encodes for protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime exon coding region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001215"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000202"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000333">
+    <rdfs:label xml:lang="en">exon_junction</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The boundary between two exons in a processed transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">exon junction</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000699"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#end_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#start_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000204">
+    <rdfs:label xml:lang="en">five_prime_UTR</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region at the 5' end of a mature transcript (preceding the initiation codon) that is not translated into a protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">5' UTR</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five prime UTR</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five_prime_untranslated_region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000203"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#starts"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000234"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000205">
+    <rdfs:label xml:lang="en">three_prime_UTR</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that spatial relations such as adjacent_to must be 'contextualized'</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region at the 3' end of a mature transcript (following the stop codon) that is not translated into a protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime UTR</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime untranslated region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000203"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#downstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#finishes"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000234"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000241">
+    <rdfs:label xml:lang="en">internal_UTR</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A UTR bordered by the terminal and initial codons of two CDSs in a polycistronic transcript. Every UTR is either 5', 3' or internal.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">internal UTR</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000203"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#downstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000203">
+    <rdfs:label xml:lang="en">UTR</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or not and? Note that spatial relations such as adjacent_to must be 'contextualized'</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Messenger RNA sequences that are untranslated and lie five prime and three prime to sequences which are translated.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">untranslated region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000241"/>
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000204"/>
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000205"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000837">
+    <rdfs:label xml:lang="en">UTR_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A region of UTR. This term is a grouping term to allow the parts of UTR to have an is_a path to the root.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of UTR.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">UTR region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000410">
+    <rdfs:label xml:lang="en">protein_binding_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of a molecule that binds to a protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">protein binding site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000409"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000446">
+    <rdfs:label xml:lang="en">UTR_intron</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Intron located in the untranslated region.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">UTR intron</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000188"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000203"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000447">
+    <rdfs:label xml:lang="en">five_prime_UTR_intron</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An intron located in the 5' UTR.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five prime UTR intron</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000446"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000204"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000448">
+    <rdfs:label xml:lang="en">three_prime_UTR_intron</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An intron located in the 3' UTR.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime UTR intron</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000446"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000205"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001421">
+    <rdfs:label xml:lang="en">splice_junction</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The boundary between an intron and an exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000699"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000162">
+    <rdfs:label xml:lang="en">splice_site</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Consensus region of primary transcript bordering junction of splicing.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001236"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001421"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001419">
+    <rdfs:label xml:lang="en">cis_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Intronic 2 bp region bordering exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000162"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000162"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000188"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001420">
+    <rdfs:label xml:lang="en">trans_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Primary transcript region bordering trans-splice junction.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000162"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000163">
+    <rdfs:label xml:lang="en">five_prime_cis_splice_site</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The junction between the 3 prime end of an exon and the following intron.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ucl.ac.uk/~ucbhjow/b241/glossary.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ucl.ac.uk/~ucbhjow/b241/glossary.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">5' splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">donor</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">donor splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">five prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">splice donor site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001419"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000162"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#downstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#starts"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000188"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000164">
+    <rdfs:label xml:lang="en">three_prime_cis_splice_site</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The junction between the 3 prime end of an intron and the following exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ucl.ac.uk/~ucbhjow/b241/glossary.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ucl.ac.uk/~ucbhjow/b241/glossary.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">3' splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">acceptor</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">acceptor splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">splice acceptor site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">three prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001419"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000162"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#finishes"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000188"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000676">
+    <rdfs:label xml:lang="en">canonical_three_prime_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The canonical 3' splice site has the sequence "AG".</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">canonical three prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000164"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000677">
+    <rdfs:label xml:lang="en">canonical_five_prime_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The canonical 5' splice site has the sequence "GT".</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">canonical five prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000163"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000678">
+    <rdfs:label xml:lang="en">non_canonical_three_prime_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A 3' splice site that does not have the sequence "AG".</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">non canonical three prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">non-canonical three prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000164"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000679">
+    <rdfs:label xml:lang="en">non_canonical_five_prime_splice_site</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A 5' splice site which does not have the sequence "GT".</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">non canonical five prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">non-canonical five prime splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000163"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000188">
+    <rdfs:label xml:lang="en">intron</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A segment of DNA that is transcribed, but removed from within the transcript by splicing together the sequences (exons) on either side of it.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_adjacent_to"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#downstream_adjacent_to"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000406">
+    <rdfs:label xml:lang="en">twintron</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An intron within an intron. Twintrons are group II or III introns, into which another group II or III intron has been transposed.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>PMID:1899376</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/PMID#PMID_1899376</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>PMID:7823908</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/PMID#PMID_7823908</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000188"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000188"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000233">
+    <rdfs:label xml:lang="en">mature_transcript</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A processed transcript cannot contain introns. TODO: add reverse links</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A transcript which has undergone the necessary modifications, if any, for its function. In eukaryotes this includes, for example, processing of introns, cleavage, base modification, and modifications to the 5' and/or the 3' ends, other than addition of bases. In bacteria functional mRNAs are usually not modified.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000673"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#is_consecutive_sequence_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000234">
+    <rdfs:label xml:lang="en">mRNA</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An mRNA does not contain introns as it is a processed_transcript. The equivalent kind of primary_transcript is protein_coding_primary_transcript (SO:0000120) which may contain introns. This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Messenger RNA is the intermediate molecule between DNA and protein. It includes UTR and coding sequences. It does not contain introns.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">messenger RNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000233"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000316">
+    <rdfs:label xml:lang="en">CDS</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A contiguous sequence which begins with, and includes, a start codon and ends with, and includes, a stop codon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">coding sequence</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#is_consecutive_sequence_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000360"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#started_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000318"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#finished_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000319"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000605">
+    <rdfs:label xml:lang="en">intergenic_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The region between two known genes.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">intergenic region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001411"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#adjacent_to"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001411"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#upstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#downstream_adjacent_to"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000833">
+    <rdfs:label xml:lang="en">transcript_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term was added to provide a grouping term for the region parts of transcript, thus giving them an is_a path back to the root.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of a transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">transcript region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001411"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000673"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000834">
+    <rdfs:label xml:lang="en">mature_transcript_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A manufactured term to collect together the parts of a mature transcript and give them an is_a path to the root.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of a mature transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">mature transcript region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000833"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000233"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000835">
+    <rdfs:label xml:lang="en">primary_transcript_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term was added to provide a grouping term for the region parts of primary_transcript, thus giving them an is_a path back to the root.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A part of a primary transcript.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">primary transcript region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000833"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000836">
+    <rdfs:label xml:lang="en">mRNA_region</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term was added to provide a grouping term for the region parts of mRNA, thus giving them an is_a path back to the root.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of an mRNA.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">mRNA region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000834"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000234"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000852">
+    <rdfs:label xml:lang="en">exon_region</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of an exon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>RSC:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/RSC#RSC_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">exon region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000833"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000400">
+    <rdfs:label xml:lang="en">sequence_attribute</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute describes a quality of sequence.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000401">
+    <rdfs:label xml:lang="en">gene_attribute</rdfs:label>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene attribute</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000733"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000733">
+    <rdfs:label xml:lang="en">feature_attribute</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute describing a located_sequence_feature.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">feature attribute</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000400"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000067">
+    <rdfs:label xml:lang="en">gene_to_gene_feature</rdfs:label>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene to gene feature</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000401"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000483">
+    <rdfs:label xml:lang="en">nc_primary_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A primary transcript that is never translated into a protein.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">noncoding primary transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000631">
+    <rdfs:label xml:lang="en">polycistronic_primary_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A primary transcript encoding for more than one gene product.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_into"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_3000001"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000632">
+    <rdfs:label xml:lang="en">monocistronic_primary_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A primary transcript encoding for one gene product.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_into"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_3000008"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000634">
+    <rdfs:label xml:lang="en">polycistronic_mRNA</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">merge with is_a parent? The definition states proteins. Is the intent that functional regions of e.g. miRNAs are 'cistrons'? -- CJM</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An mRNA that encodes multiple proteins from at least two non-overlapping regions.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:rd</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_rd</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000001"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000655">
+    <rdfs:label xml:lang="en">ncRNA</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ncRNA is a processed_transcript, so it may not contain parts such as transcribed_spacer_regions that are removed in the act of processing. For the corresponding primary_transcripts, please see term SO:0000483 nc_primary_transcript.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An RNA transcript that does not encode for a protein, rather the RNA molecule is the gene product.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">noncoding RNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+    <owl:disjointWith rdf:resource="http://purl.org/obo/owl/SO#SO_0000234"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001411">
+    <rdfs:label xml:lang="en">biological_region</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region defined by its disposition to be involved in a biological process.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">biological region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#site_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0008150"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000673">
+    <rdfs:label xml:lang="en">transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An RNA synthesized on a DNA or RNA template by an RNA polymerase.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000147"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000699">
+    <rdfs:label xml:lang="en">junction</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A junction is a boundary between regions. A boundary has an extent of zero.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A sequence_feature with an extent of zero.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">boundary</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000110"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#start_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001236"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#end_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0001236"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000704">
+    <rdfs:label xml:lang="en">gene</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology. A gene may be considered as a unit of inheritance.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:immuno_workshop</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_immuno_workshop</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encodes"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000185"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001026">
+    <rdfs:label xml:lang="en">genome</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A genome is the sum of genetic material within a cell or virion.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:immuno_workshop</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_immuno_workshop</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_3000005"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0005836">
+    <rdfs:label xml:lang="en">regulatory_region</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A DNA sequence that controls the expression of a gene.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.genpromag.com/scripts/glossary.asp?LETTER=R</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.genpromag.com/scripts/glossary.asp?LETTER=R</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000001"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#regulates_expression_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000001">
+    <rdfs:label xml:lang="en">polycistronic_mature_transcript</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000233"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000002">
+    <rdfs:label xml:lang="en">sequence_disposition</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO examples: the disposition of a sequence to be transcribed into an snRNA (snRNA_encoding, SO:0000623), silenced_by_DNA_methylation (SO:0000895), codon_redefined (SO:0000882).</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute of a sequence that causes a process or transformation of the sequence to occur under specific circumstances. In general if the attribute has something to do with an event, such as transcription, translation or alternative splicing, then the attribute will probably be a disposition.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000400"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000003">
+    <rdfs:label xml:lang="en">sequence_function</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute of a sequence which describes an end-directed activity of a sequence that follows from the kind of sequence it is.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000400"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000004">
+    <rdfs:label xml:lang="en">sequence_role</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SO examples: the role of a sequence as a forward (SO:0001030) strand in a duplex; the role of a sequence in being paralogous (SO:0000859) to some other sequence, the role of a gene in being a member of a gene array (SO:0000081).</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute that describes something about the region that is not essential to it but arises in certain contexts. Often if an attribute only makes sense for the sequence in the context of another sequence, for example a paralog, or being a member of an operon.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cb</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cb</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000400"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000068">
+    <rdfs:label xml:lang="en">overlapping</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strandedness? change name?</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute describing a gene that has a sequence that overlaps the sequence of another gene.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000067"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000400"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#quality_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO%3D0000704%61overlaps(SO%3D0000704)"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000069">
+    <rdfs:label xml:lang="en">inside_intron</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strandedness?</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute to describe a gene when it is located within the intron of another gene.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">inside intron</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000068"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000400"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#quality_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO%3D0000704%61contained_by(SO%3D0000188)"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000070">
+    <rdfs:label xml:lang="en">inside_intron_antiparallel</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute to describe a gene when it is located within the intron of another gene and on the opposite strand.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">inside intron antiparallel</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000069"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000071">
+    <rdfs:label xml:lang="en">inside_intron_parallel</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">An attribute to describe a gene when it is located within the intron of another gene and on the same strand.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">inside intron parallel</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000069"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000005">
+    <rdfs:label xml:lang="en">sequence_collection</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000006">
+    <rdfs:label xml:lang="en">polycistronic_non_coding_primary_transcript</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000631"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000007">
+    <rdfs:label xml:lang="en">polycistronic_coding_primary_transcript</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000631"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000008">
+    <rdfs:label xml:lang="en">monocistronic_mature_transcript</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000233"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000316"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_3000009">
+    <rdfs:label xml:lang="en">polycistronic_ncRNA</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_3000001"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000140">
+    <rdfs:label xml:lang="en">attenuator</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A sequence segment located within the five prime end of an mRNA that causes premature termination of translation.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:as</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_as</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">attenuator sequence</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0005836"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000234"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000141">
+    <rdfs:label xml:lang="en">terminator</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The sequence of DNA located either at the end of the transcript that causes RNA polymerase to terminate transcription.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">terminator sequence</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0005836"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contained_by"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000673"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001055">
+    <rdfs:label xml:lang="en">transcriptional_cis_regulatory_region</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A regulatory_region that modulates the transcription of a gene or genes.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:regcreative</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_regcreative</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">transcriptional cis regulatory region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0005836"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001056">
+    <rdfs:label xml:lang="en">splicing_regulatory_region</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A regulatory_region that modulates splicing.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">splicing regulatory region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0005836"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000727">
+    <rdfs:label xml:lang="en">CRM</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Requested by Stepen Grossmann Dec 2004.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A regulatory_region where more than 1 TF_binding_site together are regulatorily active.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:SG</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_SG</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">cis regulatory module</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">TF module</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001055"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0001055"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000235"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000235">
+    <rdfs:label xml:lang="en">TF_binding_site</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A region of a molecule that binds a TF complex [GO:0005667].</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">TF binding site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">transcription factor binding site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000410"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0005836"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000165">
+    <rdfs:label xml:lang="en">enhancer</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An enhancer may participate in an enhanceosome GO:0034206.nA protein-DNA complex formed by the association of a distinct set of general and specific transcription factors with a region of enhancer DNA. The cooperative assembly of an enhanceosome confers specificity of transcriptional regulation.nThis comment is a placeholder should we start to make cross products with GO.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A cis-acting sequence that increases the utilization of (some) eukaryotic promoters, and can function in either orientation and in any location (upstream or downstream) relative to the promoter.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ebi.ac.uk/embl/Documentation/FT_definitions/feature_table.html</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000727"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000167">
+    <rdfs:label xml:lang="en">promoter</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This term is mapped to MGED. Do not obsolete without consulting MGED ontology.nThe region on a DNA molecule involved in RNA polymerase binding to initiate transcription.</rdfs:comment>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the basal transcription machinery.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:regcreative</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_regcreative</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">promoter sequence</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001055"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#site_of"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/GO#GO_0034062"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000568">
+    <rdfs:label xml:lang="en">bidirectional_promoter</rdfs:label>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">bidirectional promoter</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000167"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000276">
+    <rdfs:label xml:lang="en">miRNA</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Small, ~22-nt, RNA molecule that is the endogenous transcript of a miRNA gene. Micro RNAs are produced from precursor molecules (SO:0000647) that can form local hairpin structures, which ordinarily are processed (via the Dicer pathway) such that a single miRNA molecule accumulates from one arm of a hairpin precursor molecule. Micro RNAs may trigger the cleavage of their target molecules or act as translational repressors.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>PMID:12592000</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/PMID#PMID_12592000</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">micro RNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">microRNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000370"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_from"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000647"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000647">
+    <rdfs:label xml:lang="en">miRNA_primary_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A primary transcript encoding a micro RNA.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">micro RNA primary transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">miRNA primary transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0000483"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000344">
+    <rdfs:label xml:lang="en">splice_enhancer</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">Region of a transcript that regulates splicing.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">splice enhancer</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001056"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000370">
+    <rdfs:label xml:lang="en">small_regulatory_ncRNA</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A non-coding RNA, usually with a specific secondary structure, that acts to regulate gene expression.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ma</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ma</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">small regulatory ncRNA</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000655"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#regulates_expression_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0005836">
+    <rdfs:label xml:lang="en">regulatory_region</rdfs:label>
+    <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#SOFA"/>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A DNA sequence that controls the expression of a gene.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>URL:http://www.genpromag.com/scripts/glossary.asp?LETTER=R</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.genpromag.com/scripts/glossary.asp?LETTER=R</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">regulatory region</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000001"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#regulates_expression_of"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000704"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000459">
+    <rdfs:label xml:lang="en">gene_with_trans_spliced_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A gene with a transcript that is trans-spliced.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene with trans spliced transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000704"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#associated_with"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000479"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000479">
+    <rdfs:label xml:lang="en">trans_spliced_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A transcript that is trans-spliced.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans spliced transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans-spliced transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000673"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_quality"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000870"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000479">
+    <rdfs:label xml:lang="en">trans_spliced_transcript</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A transcript that is trans-spliced.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans spliced transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans-spliced transcript</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000673"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_quality"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000870"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000707">
+    <rdfs:label xml:lang="en">trans_splice_donor_site</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SL RNA contains a donor site.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">The 5' five prime splice site region of the donor RNA.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasRelatedSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">5 prime trans splice site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans splice donor site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">trans-splice donor site</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subClassOf rdf:resource="http://purl.org/obo/owl/SO#SO_0001420"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000710">
+    <rdfs:label xml:lang="en">gene_with_stop_codon_redefined_as_selenocysteine</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A gene encoding an mRNA that has the stop codon redefined as selenocysteine.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene with stop codon redefined as selenocysteine</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000697"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#contains"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000885"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000711">
+    <rdfs:label xml:lang="en">gene_with_mRNA_recoded_by_translational_bypass</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A gene with mRNA recoded by translational bypass.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene with mRNA recoded by translational bypass</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000693"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#associated_with"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000886"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000712">
+    <rdfs:label xml:lang="en">gene_with_transcript_with_translational_frameshift</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A gene encoding a transcript that has a translational frameshift.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:xp</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_xp</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">gene with transcript with translational frameshift</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://purl.org/obo/owl/SO#SO_0000693"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#associated_with"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/SO#SO_0000887"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#connects_on">
+    <rdfs:label xml:lang="en">connects_on</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">X connects_on Y,Z,R iff whenever X is on a R, X is adjacent_to a Y and adjacent_to a Z</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#maximally_overlaps">
+    <rdfs:label xml:lang="en">maximally_overlaps</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A maximally_overlaps X and Y iff all parts of A (including A itself) overlap both X and Y</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">interval_intersection_between</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#overlaps"/>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/obo#complete_evidence_for_feature">
+    <rdfs:label xml:lang="en">complete_evidence_for_feature</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If A is a feature with multiple regions such as a multi exon transcript, the supporting EST evidence is complete if each of the regions is supported by an equivalent region in B. Also there must be no extra regions in B that are not represented in A. This relationship was requested by jeltje on the SO term tracker. The thread for the discussion is available here: http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1917222&amp;group_id=72703&amp;atid=810408.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">B is complete_evidence_for_feature A if the extent (5' and 3' boundaries) and internal boundaries of B fully support the extent and internal boundaries of A.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#evidence_for_feature"/>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encodes_i">
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/obo#encoded_by_i"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instance-level version of encodes relation</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encoded_by_i">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instance-level version of encoded_by relation</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#is_consecutive_sequence_of">
+    <rdfs:label xml:lang="en">is_consecutive_sequence_of</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">R is_consecutive_sequence_of U if and only if every instance of R is equivalent to a collection of instances of U u1,u2,...,un such that no pair ux uy is overlapping, and for all ux, ux is adjacent_to ux-1 and ux+1, with the exception of the initial and terminal u1 and un (which may be identical).</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#contains"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encodes">
+    <rdfs:label xml:lang="en">encodes</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">all some, all only</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#encoded_by">
+    <rdfs:label xml:lang="en">encoded_by</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#indirectly_encodes">
+    <rdfs:label xml:lang="en">indirectly_encodes</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example: gene indirectly_encodes mature_transcript (inferred)</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">X indirectly_encodes Y if there exists some Z such that X encodes Z and Z processed_into Y.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/obo#encodes"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/obo#processed_into"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#indirectly_encoded_by">
+    <rdfs:label xml:lang="en">indirectly_encoded_by</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example: CDS indirectly_encoded_by gene (inferred)</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://purl.org/obo/owl/obo#encoded_by"/>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/obo#processed_from"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://purl.org/obo/owl/obo#evidence_for_feature">
+    <rdfs:label xml:lang="en">evidence_for_feature</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relationship was requested by nlw on the SO term tracker. The thread for the discussion is available here: http://sourceforge.net/tracker/index.php?func=detail&amp;aid=1911481&amp;group_id=72703&amp;atid=810408.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">B is evidence_for_feature A, if an instance of B supports the existence of A.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:TransitiveProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_quality">
+    <rdfs:label xml:lang="en">has_quality</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relationship between a feature and an atrribute.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#quality_of">
+    <rdfs:label xml:lang="en">quality_of</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/obo#has_quality"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relationship between an atrribute and a feature.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#homologous_to">
+    <rdfs:label xml:lang="en">homologous_to</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#non_functional_homolog_of">
+    <rdfs:label xml:lang="en">non_functional_homolog_of</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A relationship between a pseudogenic feature and its functional ancestor.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#homologous_to"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#orthologous_to">
+    <rdfs:label xml:lang="en">orthologous_to</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#homologous_to"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#overlaps_no">
+    <rdfs:label xml:lang="en">overlaps_no</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note that this relation is not inherited in the normal way. We need to hack this in OE with a metadata declaration.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A overlaps_no B if there are no instances of A that overlap any instance of B.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:cjm</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_cjm</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasExactSynonym>
+      <oboInOwl:Synonym>
+        <rdfs:label xml:lang="en">non_overlapping_with_any</rdfs:label>
+      </oboInOwl:Synonym>
+    </oboInOwl:hasExactSynonym>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#no_overlap_with_i">
+    <rdfs:label xml:lang="en">no_overlap_with_i</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Union(p m pi mi) in Allen.</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#paralogous_to">
+    <rdfs:label xml:lang="en">paralogous_to</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#homologous_to"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#integral_part_of">
+    <rdfs:label xml:lang="en">integral_part_of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see RO. integral_part_of is like all-some part_of, but also holds in the inverse direction. Example: CDS integral_part_of mRNA</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#part_of"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#has_integral_part">
+    <rdfs:label xml:lang="en">has_integral_part</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#has_part"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#partial_evidence_for_feature">
+    <rdfs:label xml:lang="en">partial_evidence_for_feature</rdfs:label>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">B is partial_evidence_for_feature A if the extent of B supports part_of but not all of A.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:ke</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_ke</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#evidence_for_feature"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#derived_from">
+    <rdfs:label xml:lang="en">derived_from</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_from">
+    <rdfs:label xml:lang="en">processed_from</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#derived_from"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#processed_into">
+    <rdfs:label xml:lang="en">processed_into</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#regulates">
+    <rdfs:label xml:lang="en">regulates</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#regulates_expression_of">
+    <rdfs:label xml:lang="en">regulates_expression_of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reified version of GO:0010467</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#similar_to">
+    <rdfs:label xml:lang="en">similar_to</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#transcribed_from">
+    <rdfs:label xml:lang="en">transcribed_from</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#derived_from"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#translation_of">
+    <rdfs:label xml:lang="en">translation_of</rdfs:label>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/obo/owl/obo#derived_from"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#translates_to">
+    <rdfs:label xml:lang="en">translates_to</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/obo/owl/obo#translation_of"/>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#site_of">
+    <rdfs:label xml:lang="en">site_of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation between a region and a biological process</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#output_of">
+    <rdfs:label xml:lang="en">output_of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation between a region and a biological process</rdfs:comment>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/obo/owl/obo#variant_of">
+    <rdfs:label xml:lang="en">variant_of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Added to SO during the immunology workshop, June 2007.  This relationship was approved by Barry Smith.</rdfs:comment>
+    <oboInOwl:hasDefinition>
+      <oboInOwl:Definition>
+        <rdfs:label xml:lang="en">A' is a variant (mutation) of A = definition every instance of A' is either an immediate mutation of some instance of A, or there is a chain of immediate mutation processes linking A' to some instance of A.</rdfs:label>
+        <oboInOwl:hasDbXref>
+          <oboInOwl:DbXref>
+            <rdfs:label>SO:immuno_workshop</rdfs:label>
+            <oboInOwl:hasURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/obo/owl/SO#SO_immuno_workshop</oboInOwl:hasURI>
+          </oboInOwl:DbXref>
+        </oboInOwl:hasDbXref>
+      </oboInOwl:Definition>
+    </oboInOwl:hasDefinition>
+    <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+  </owl:ObjectProperty>
+</rdf:RDF>

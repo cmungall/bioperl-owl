@@ -108,8 +108,9 @@ sub _initialize {
     }
     $self->_pushback($directive);
   }
-  
-  #need to validate against SOFA, no SO
+  # TODO - make this configurable
+  $self->{_label_to_id_map} = require 'Bio/FeatureIO/types.pl'; 
+  $self;
 }
 
 =head2 _create_writer
@@ -162,17 +163,22 @@ sub _create_writer {
 
     $self->{'writer'}->startTag([OWL,'Ontology'], [RDF,'about']=>$self->namespace);
 
-    # TODO: configurable
-    $self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/working_draft.owl");  # temporary URL
-    $self->{'writer'}->endTag([OWL,'imports']);
+    if (0) {
+	# TODO: configurable
+	$self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/working_draft.owl");  # temporary URL
+	$self->{'writer'}->endTag([OWL,'imports']);
 
-    # TODO: configurable
-    $self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/working_draft-ecs.owl");  # temporary URL
-    $self->{'writer'}->endTag([OWL,'imports']);
+	# TODO: configurable
+	$self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/working_draft-ecs.owl");  # temporary URL
+	$self->{'writer'}->endTag([OWL,'imports']);
 
-    #$self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"http://song.cvs.sourceforge.net/viewvc/*checkout*/song/ontology/gia_i.owl");  # temporary URL
-    $self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/gia_i.owl");  # temporary URL
-    $self->{'writer'}->endTag([OWL,'imports']);
+	$self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"file:///Users/cjm/cvs/song/ontology/gia_i.owl");  # temporary URL
+	$self->{'writer'}->endTag([OWL,'imports']);
+    }
+    if (1) {
+	$self->{'writer'}->startTag([OWL,'imports'], [RDF,'resource']=>"http://purl.org/obo/owl/so_ext_all");  # temporary URL
+	$self->{'writer'}->endTag([OWL,'imports']);
+    }
 
 
     $self->{'writer'}->endTag([OWL,'Ontology']);
@@ -212,9 +218,17 @@ sub namespace {
 sub uri {
     my $self = shift;
     my $id = shift;
+    if (!$id) {
+	$self->throw("must pass id");
+    }
     if (ref($id)) {
-        # $id is feature object
-        $id = $id->primary_id;
+	if (ref($id->primary_id)) {
+	    # $id is feature object
+	    $id = $id->primary_id;
+	}
+	else {
+	    return;
+	}
     }
     return $self->namespace . "$id";
 }
@@ -224,6 +238,10 @@ sub so_uri {
     my $type = shift;
     if (ref($type)) {
         $type = $type->name;
+    }
+    my $id = $self->{_label_to_id_map}->{$type};
+    if ($id) {
+	$type = $id;
     }
     return SO . $type;
 }
@@ -258,7 +276,12 @@ sub write_feature {
 
   my ($sj,$ej) = $self->_junctions($feature);
 
-  $w->startTag([RDF,'Description'],[RDF,'about']=>$self->uri($feature));
+  my $uri = $self->uri($feature);
+  my @about = ();
+  if ($uri) {
+      @about = ([RDF,'about']=>$uri);
+  }
+  $w->startTag([RDF,'Description'],@about);
   $w->startTag([RDF,'type'],[RDF,'resource']=>$self->so_uri($feature->type));
   $w->endTag([RDF,'type']);
   my @v = ($feature->get_Annotations('Name'));
@@ -268,10 +291,10 @@ sub write_feature {
       $w->endTag([RDFS,'label']);
   }
 
-  $w->startTag([SO,'starts_on_i'],[RDF,'resource']=>$self->uri($sj));
-  $w->endTag([SO,'starts_on_i']);
-  $w->startTag([SO,'ends_on_i'],[RDF,'resource']=>$self->uri($ej));
-  $w->endTag([SO,'ends_on_i']);
+  $w->startTag([SO,'starts_on'],[RDF,'resource']=>$self->uri($sj));
+  $w->endTag([SO,'starts_on']);
+  $w->startTag([SO,'ends_on'],[RDF,'resource']=>$self->uri($ej));
+  $w->endTag([SO,'ends_on']);
   # TODO: additional metadata
   $w->endTag([RDF,'Description']);
 
@@ -332,7 +355,7 @@ sub _junction {
 
 If we want to reason from first principles using an OWL reasoner, we
 cannot use arithmetic. Instead we enumerate all bases on each strand
-and add immediately_before_i relations between them.
+and add immediately_before relations between them.
 
 =cut
 
@@ -349,13 +372,13 @@ sub write_all_junctions {
             my $rjid_next = $self->_junction($seq_id,$i-1,-1);
 
             $w->startTag([RDF,'Description'],[RDF,'about']=>$self->uri($jid));
-            $w->startTag([SO,'immediately_before_i'],[RDF,'resource']=>$self->uri($jid_next));
-            $w->endTag([SO,'immediately_before_i']);
+            $w->startTag([SO,'immediately_before'],[RDF,'resource']=>$self->uri($jid_next));
+            $w->endTag([SO,'immediately_before']);
             $w->endTag([RDF,'Description']);
             
             $w->startTag([RDF,'Description'],[RDF,'about']=>$self->uri($rjid));
-            $w->startTag([SO,'immediately_before_i'],[RDF,'resource']=>$self->uri($rjid_next));
-            $w->endTag([SO,'immediately_before_i']);
+            $w->startTag([SO,'immediately_before'],[RDF,'resource']=>$self->uri($rjid_next));
+            $w->endTag([SO,'immediately_before']);
             $w->endTag([RDF,'Description']);
             
         }
